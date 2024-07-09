@@ -1,8 +1,8 @@
 // Wait for the DOM content to be fully loaded before executing the script
 document.addEventListener('DOMContentLoaded', function() {
     // Get the form element using its class name 'formEntry'
-    const form = document.getElementById('blogForm')[0];
-
+    const form = document.getElementById('blogForm');
+console.log(form)
     // Add an event listener to handle the form submission
     form.addEventListener('submit', function(event) {
         // Prevent the default form submission behavior to handle it with JavaScript
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         form.reset();
         
         // Redirect to the display page to show the saved blog posts
-        window.location.href = "blog.html";
+        window.location.href ="./blog.html";
     });
 
     // Function to save the blog post object to local storage
