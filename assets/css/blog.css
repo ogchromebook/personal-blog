@@ -1,0 +1,35 @@
+/* Dark Mode */
+.dark {
+    background-color:black;
+    height: 100vh;
+    color: white;
+}
+
+.light {
+    background-color:white;
+    color: black;
+    height: 100vh;
+}
+
+.blogCard {
+    display: flex;
+    border: 2px solid black;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.blogTitle {
+width: 50%;
+border: 2px solid green;
+}
+
+.blogAuthor {
+width: 50%;
+border: 2px solid green;
+}
+
+.blogContent {
+width: 50%;
+border: 2px solid green;
+}

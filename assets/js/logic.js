@@ -1,33 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const blogContainer = document.getElementById('blogContainer');
+// Access toggle switch HTML element
+const modeSwitch = document.querySelector('#modeSwitch');
+const body = document.querySelector('body');
 
-    function loadBlogData() {
-        const blogData = JSON.parse(localStorage.getItem('blogData')) || [];
+// Set default mode to dark
+let mode = 'dark';
 
-        blogData.forEach(blog => {
-            console.log(blog)
-            const blogCard = document.createElement('div');
-            blogCard.className = blogCard
-
-            const blogTitle = document.createElement('div');
-            blogTitle.className = 'blogTitle';
-            blogTitle.textContent = blog.title
-
-            const blogAuthor = document.createElement('div');
-            blogAuthor.className = 'blogAuthor';
-            blogAuthor.textContent = blog.author
-
-            const blogContent = document.createElement('div');
-            blogContent.className = 'blogContent';
-            blogContent.textContent = blog.content
-
-            blogCard.appendChild(blogTitle);
-            blogCard.appendChild(blogAuthor);
-            blogCard.appendChild(blogContent);
-
-            blogContainer.appendChild(blogCard);
-        });
-    }
-
-    loadBlogData()
+// Listen for a click event on toggle switch
+modeSwitch.addEventListener('click', function () {
+  // If mode is dark, apply light background
+  if (mode === 'dark') {
+    mode = 'light';
+    body.setAttribute('class', 'light');
+  }
+  // If mode is light, apply dark background
+  else {
+    mode = 'dark';
+    body.setAttribute('class', 'dark');
+  }
 });
