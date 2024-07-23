@@ -10,9 +10,9 @@ This webpage is a very cut and dry space for a client to store ideas that they c
 - Open index.html file in a live server
 - Fill out your first blog post within the boxes shown below!
 
-    ```md
+    
     ![Screenshot of webpage](./assets/images/Screenshot%202024-07-12%20180047.png)
-    ```
+    
 
 ## Credits
 
